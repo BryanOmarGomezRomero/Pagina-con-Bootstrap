@@ -2,7 +2,7 @@
 
 Este proyecto es una **página web simple** creada con **HTML, Bootstrap y JavaScript**, que presenta un resumen de la carrera de Kanye West y algunos de sus álbumes más importantes con sus respectivas portadas.  
 
-La página está diseñada con un estilo limpio, responsivo y visualmente atractivo, ideal para mostrar en portafolio o como práctica de desarrollo web frontend.
+La página está diseñada con un estilo limpio, responsivo y visualmente atractivo.
 
 ---
 
