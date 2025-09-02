@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kanye West - Resumen Musical</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Kanye West</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center py-5 bg-secondary">
+    <h1 class="display-4 fw-bold">Resumen de la Carrera de Kanye West</h1>
+    <p class="lead">Rapper • Producer • Fashion Designer • Innovator</p>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="container my-5">
+    <!-- Resumen -->
+    <section class="mb-5">
+      <h2 class="fw-bold">Biografía</h2>
+      <p>
+        Kanye West (nacido en 1977) es un rapero, productor musical, diseñador de moda y empresario estadounidense. 
+        Es considerado una de las figuras más influyentes en la música contemporánea y la cultura popular. 
+        Desde su álbum debut <em>The College Dropout</em> (2004), ha experimentado con diferentes estilos musicales, 
+        revolucionando el hip-hop con producciones innovadoras. Además de su música, ha incursionado en la moda 
+        con su marca Yeezy y ha estado involucrado en debates culturales y sociales.
+        Me encanta su musica anque esta medio loco, por lo que hice un mini resumen de su carrera.
+        soy Bryan Omar Gomez Romero
+        Codigo: 217446495
+
+      </p>
+    </section>
+
+    <!-- albumes destacados -->
+    <section>
+      <h2 class="fw-bold mb-4">Álbumes Destacados</h2>
+      <div id="album-list" class="row gy-4"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center text-muted py-3">
+    <small>© 2025 Página de música sobre Kanye West | Proyecto educativo</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript para mostrar albumes -->
+  <script>
+    const albums = [
+      { 
+      titulo: "The College Dropout", 
+      año: 2004, 
+      descripcion: "Su álbum debut, aclamado por la crítica, con éxitos como 'Jesus Walks'.",
+      portada: "https://upload.wikimedia.org/wikipedia/en/a/a3/Kanyewest_collegedropout.jpg"
+    },
+    { 
+      titulo: "Late Registration", 
+      año: 2005, 
+      descripcion: "El mejor en mi opinion, Incluye orquestaciones y canciones como 'We major'.",
+      portada: "https://upload.wikimedia.org/wikipedia/en/f/f4/Late_registration_cd_cover.jpg"
+    },
+    { 
+      titulo: "Graduation", 
+      año: 2007, 
+      descripcion: "Un estilo más electrónico, con hits como 'Stronger'.",
+      portada: "https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg"
+    },
+    { 
+      titulo: "808s & Heartbreak", 
+      año: 2008, 
+      descripcion: "Experimental, centrado en el uso de auto-tune.",
+      portada: "https://upload.wikimedia.org/wikipedia/en/f/f1/808s_%26_Heartbreak.png"
+    },
+{ 
+  titulo: "My Beautiful Dark Twisted Fantasy", 
+  año: 2010, 
+  descripcion: "Considerado su obra maestra, con 'Power' y 'Runaway'.",
+  portada: "https://upload.wikimedia.org/wikipedia/en/b/be/MBDTF_ALT.jpg"
+},
+    { 
+      titulo: "Yeezus", 
+      año: 2013, 
+      descripcion: "Minimalista e industrial, rompió con lo convencional.",
+      portada: "https://upload.wikimedia.org/wikipedia/en/0/03/Yeezus_album_cover.png"
+    },
+ { 
+  titulo: "Donda", 
+  año: 2021, 
+  descripcion: "Un proyecto expansivo dedicado a su madre, con gran variedad de colaboraciones.",
+  portada: "https://upload.wikimedia.org/wikipedia/commons/6/60/Kanye_donda.jpg"
+}
+    ];
+const albumList = document.getElementById("album-list");
+
+  albums.forEach(album => {
+    const col = document.createElement("div");
+    col.className = "col-md-4";
+
+    col.innerHTML = `
+      <div class="card bg-secondary text-light h-100 shadow-lg">
+        <img src="${album.portada}" class="card-img-top" alt="Portada de ${album.titulo}"
+             onerror="this.onerror=null; this.src='https://via.placeholder.com/300x300.png?text=Kanye+West';">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">${album.titulo} (${album.año})</h5>
+          <p class="card-text">${album.descripcion}</p>
+        </div>
+      </div>
+    `;
+
+    albumList.appendChild(col);
+  });
+</script>
+</body>
+</html>
